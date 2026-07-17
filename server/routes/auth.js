@@ -1,6 +1,7 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const auth = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -46,6 +47,16 @@ router.post('/create-teacher', async (req, res) => {
       message: '선생님 계정이 생성되었습니다',
       user
     });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+router.put('/me', auth, async (req, res) => {
+  try {
+    const { name } = req.body;
+    const user = await User.findByIdAndUpdate(req.user.id, { name }, { new: true });
+    res.json(user);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
