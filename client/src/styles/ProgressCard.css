@@ -1,0 +1,105 @@
+.progress-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  border-left: 4px solid #667eea;
+}
+
+.progress-circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-svg {
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-width: 8;
+}
+
+.progress-fill {
+  fill: none;
+  stroke: #667eea;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: central;
+  fill: #667eea;
+}
+
+.progress-info {
+  flex: 1;
+}
+
+.progress-info h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.stat-item.total {
+  border-bottom: none;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+  font-weight: bold;
+}
+
+.stat-item .label {
+  color: #666;
+}
+
+.stat-item .value {
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-item .value.completed {
+  color: #28a745;
+}
+
+.stat-item .value.pending {
+  color: #ffc107;
+}
+
+.stat-item .value.overdue {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .progress-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-item {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .stat-item .label {
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: homework-manager-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+
+  - type: web
+    name: homework-manager-client
+    runtime: node
+    plan: free
+    buildCommand: cd client && npm install && npm run build
+    startCommand: npx serve -s client/dist -l $PORT
+    envVars:
+      - key: VITE_API_URL
+        value: https://homework-manager-api.onrender.com/api

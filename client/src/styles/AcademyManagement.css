@@ -1,0 +1,271 @@
+.management-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.management-header {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.management-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.management-header button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.management-header button:hover {
+  background: #764ba2;
+}
+
+.management-content {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.academy-section,
+.add-students-section,
+.students-list-section,
+.guide-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.academy-section h2,
+.add-students-section h2,
+.students-list-section h2,
+.guide-section h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.academy-section select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.method-btn {
+  flex: 1;
+  padding: 12px;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.method-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.bulk-add {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bulk-add .info {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.bulk-add textarea {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+.bulk-add textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.single-add {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.single-add input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.single-add input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.add-btn {
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+.error-message {
+  padding: 12px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.success-message {
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.students-table-wrapper {
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.students-table thead {
+  background: #667eea;
+  color: white;
+}
+
+.students-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.students-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.students-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.students-table .empty {
+  text-align: center;
+  color: #999;
+}
+
+.guide-box {
+  background: #f0f7ff;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.guide-box p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.subject-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.subject-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 12px 20px;
+  background: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.subject-btn:hover {
+  background: #e8e8e8;
+  border-color: #667eea;
+}
+
+.subject-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.selected-subject {
+  color: #667eea;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f0f7ff;
+  border-left: 4px solid #667eea;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .management-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .management-content {
+    padding: 20px;
+  }
+
+  .add-methods {
+    flex-direction: column;
+  }
+}

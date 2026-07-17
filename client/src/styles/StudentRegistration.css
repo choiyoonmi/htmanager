@@ -1,0 +1,175 @@
+.student-registration-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+.registration-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #764ba2;
+}
+
+.registration-card h1 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.academy-name {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 30px 0;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.error-message {
+  padding: 12px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.success-message {
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-btn {
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+.students-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.students-section h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.students-table-wrapper {
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.students-table thead {
+  background: #667eea;
+  color: white;
+}
+
+.students-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.students-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.students-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.students-table .empty {
+  text-align: center;
+  color: #999;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}

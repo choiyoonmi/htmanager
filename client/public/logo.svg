@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <defs>
+    <path id="shield" d="M 100 20 L 160 50 L 160 100 C 160 140 100 170 100 170 C 100 170 40 140 40 100 L 40 50 Z"/>
+  </defs>
+
+  <!-- 방패 배경 -->
+  <use href="#shield" fill="#1a3a6b"/>
+
+  <!-- 좌측 월계수 -->
+  <g fill="none" stroke="#d4af37" stroke-width="2">
+    <!-- 왼쪽 줄기 -->
+    <path d="M 55 60 Q 45 80 50 110"/>
+    <!-- 왼쪽 잎들 -->
+    <ellipse cx="50" cy="65" rx="4" ry="8" transform="rotate(-30 50 65)" fill="#d4af37"/>
+    <ellipse cx="45" cy="75" rx="4" ry="8" transform="rotate(-40 45 75)" fill="#d4af37"/>
+    <ellipse cx="42" cy="85" rx="4" ry="8" transform="rotate(-50 42 85)" fill="#d4af37"/>
+    <ellipse cx="42" cy="95" rx="4" ry="8" transform="rotate(-60 42 95)" fill="#d4af37"/>
+    <ellipse cx="45" cy="105" rx="4" ry="8" transform="rotate(-50 45 105)" fill="#d4af37"/>
+  </g>
+
+  <!-- 우측 월계수 -->
+  <g fill="none" stroke="#d4af37" stroke-width="2">
+    <!-- 오른쪽 줄기 -->
+    <path d="M 145 60 Q 155 80 150 110"/>
+    <!-- 오른쪽 잎들 -->
+    <ellipse cx="150" cy="65" rx="4" ry="8" transform="rotate(30 150 65)" fill="#d4af37"/>
+    <ellipse cx="155" cy="75" rx="4" ry="8" transform="rotate(40 155 75)" fill="#d4af37"/>
+    <ellipse cx="158" cy="85" rx="4" ry="8" transform="rotate(50 158 85)" fill="#d4af37"/>
+    <ellipse cx="158" cy="95" rx="4" ry="8" transform="rotate(60 158 95)" fill="#d4af37"/>
+    <ellipse cx="155" cy="105" rx="4" ry="8" transform="rotate(50 155 105)" fill="#d4af37"/>
+  </g>
+
+  <!-- H 글자 -->
+  <text x="100" y="120" font-size="90" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif">H</text>
+</svg>
