@@ -23,7 +23,7 @@ export default function Login() {
   return (
     <div className="auth-container">
       <div className="auth-card">
-        <h1>학원 숙제 관리</h1>
+        <h1>해피트리</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
