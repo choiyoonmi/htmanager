@@ -166,7 +166,7 @@ export default function Dashboard() {
       <header className="dashboard-header">
         <div className="logo-section">
           <img src="/logo.svg" alt="해피트리 로고" className="academy-logo" />
-          <h1>해피트리 숙제관리</h1>
+          <h1>해피트리 관리자</h1>
         </div>
         <div className="user-info">
           <span>{user?.name}</span>
