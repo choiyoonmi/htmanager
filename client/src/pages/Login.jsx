@@ -26,7 +26,7 @@ export default function Login() {
         <h1>해피트리</h1>
         <form onSubmit={handleSubmit}>
           <input
-            type="text"
+            type="password"
             placeholder="접속번호"
             value={accessCode}
             onChange={(e) => setAccessCode(e.target.value)}
