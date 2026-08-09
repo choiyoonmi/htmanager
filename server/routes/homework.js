@@ -1,6 +1,8 @@
 const express = require('express');
 const Homework = require('../models/Homework');
+const User = require('../models/User');
 const auth = require('../middleware/auth');
+const { sendTelegram } = require('../notify');
 
 const router = express.Router();
 
@@ -51,14 +53,33 @@ router.put('/:id', auth, async (req, res) => {
 router.post('/:id/submit', auth, async (req, res) => {
   try {
     const homework = await Homework.findById(req.params.id);
+    let isNewSubmission = false;
     if (!homework.submittedBy.includes(req.user.id)) {
       homework.submittedBy.push(req.user.id);
       if (homework.submittedBy.length > 0) {
         homework.status = 'completed';
       }
+      isNewSubmission = true;
     }
     await homework.save();
     res.json(homework);
+
+    // 새 제출일 때만 원장님께 텔레그램 알림 (응답을 먼저 보낸 뒤 발송 → 학생 화면은 지연 없음)
+    if (isNewSubmission) {
+      try {
+        const student = await User.findById(req.user.id);
+        const name = student?.name || '학생';
+        const today = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric' });
+        await sendTelegram(
+          `📚 <b>${name}</b> 숙제 제출 완료\n` +
+          `과목: ${homework.subject || '-'}\n` +
+          `숙제: ${homework.title || '-'}\n` +
+          `시간: ${today}`
+        );
+      } catch (e) {
+        console.log('[telegram] 숙제 제출 알림 실패:', e.message);
+      }
+    }
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
