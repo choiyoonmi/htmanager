@@ -41,8 +41,7 @@ export const academy = {
 };
 
 export const admin = {
-  createStudents: (academyId, students) => API.post('/admin/create-students', { academyId, students }),
-  updateStudent: (academyId, studentId, data) => API.put(`/admin/academy/${academyId}/students/${studentId}`, data)
+  createStudents: (academyId, students) => API.post('/admin/create-students', { academyId, students })
 };
 
 export const classApi = {
