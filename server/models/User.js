@@ -5,7 +5,6 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   accessCode: { type: String, required: true, unique: true },
   role: { type: String, enum: ['student', 'parent', 'teacher'], default: 'student' },
-  grade: { type: String, default: '' },
   academy: { type: mongoose.Schema.Types.ObjectId, ref: 'Academy' },
   academies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Academy' }],
   profileImage: String,
